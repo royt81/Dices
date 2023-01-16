@@ -1,4 +1,13 @@
 
 body{
     text-align: center;
+    display: block;
+}
+
+input{
+    text-align: center;
+}
+
+button{
+    margin: 15px;
 }

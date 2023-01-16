@@ -1,18 +1,28 @@
 
-
-let root = document.querySelector("#root");
-let input = document.querySelector("#input");
-let submitBtn = document.querySelector("#submit");
-let textLabel = document.querySelector("#textLabel");
+const root = document.querySelector("#root");
+const input = document.querySelector("#input");
+const submitBtn = document.querySelector("#submit");
+const textLabel = document.querySelector("#textLabel");
+const resetBtn = document.querySelector("#reset");
 
 submitBtn.addEventListener("click", ()=>{
-    let number = input.value
-    console.log(number.value)
+
+    root.innerHTML = "";
+    let number = input.value;
+    console.log(number.value);
+
     if(isNaN(number)){
-        textLabel.innerText = "You must enter a number!"
+        textLabel.innerText = "You must enter a number!";
+        textLabel.style.backgroundColor = "red";
     }
-    else{
+    if(number>7){
+        textLabel.innerText = "let's keep it to no more then 7, ok?"
+        textLabel.style.backgroundColor = "yellow"
+    }
+    if(number<=7 && !isNaN(number)){
         creatDice(number)
+        textLabel.innerText = `making ${number} dices for you!`;
+        textLabel.style.backgroundColor = "green";
     }
 })
 
@@ -26,10 +36,10 @@ function formDice(){
     let diceBox = document.createElement("div");
     let sidesInput = document.createElement("input");
     let inputBtn = document.createElement("button")
-    let diceDisplay = document.createElement("h2");
+    let diceDisplay = document.createElement("h3");
 
-    diceBox.style.width = "200px";
-    diceBox.style.height = "200px";
+    diceBox.className = "diceBox"
+
     sidesInput.placeholder = "how many sides?";
     inputBtn.innerText = "SUBMIT";
     diceDisplay.innerText = 0;
@@ -48,7 +58,11 @@ function formDice(){
     )
 }
 
-
+resetBtn.addEventListener("click", ()=>{
+    root.innerHTML = ""
+    textLabel.innerText = "you reseted the board"
+    textLabel.style.backgroundColor = "orange"
+})
 
 
 

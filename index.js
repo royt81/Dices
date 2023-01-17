@@ -9,7 +9,6 @@ submitBtn.addEventListener("click", ()=>{
 
     root.innerHTML = "";
     let number = input.value;
-    console.log(number.value);
 
     if(isNaN(number)){
         textLabel.innerText = "You must enter a number!";

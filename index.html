@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Dices</title>
+    <title>🎲</title>
 </head>
 <body>
-<header>
-    <h1>Dice generator</h1>
-    <h2 id="textLabel">Pick how many dices you need</h2>
-</header>    
 
     <div id="container">
-        <h3>How many dices?</h3>
-        <button id="submit">SUBMIT</button>
-        <input type="text" id="input">
-        <button id="reset">RESET</button>
+        <div id="input-div">
+            <h1>Dice generator</h1>
+            <h2 id="textLabel">Pick how many dices you need</h2>
+            <input type="text" id="input">
+            <br>
+            <button id="submit">SUBMIT</button>
+            <button id="reset">RESET</button>
+            <button id="rollAll">ROLL ALL</button>
 
+        </div>
+        <div id="root"></div>
     </div>
-
-    <div id="root"></div>
-
 
     <script src="index.js" type="module"></script>
 </body>

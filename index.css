@@ -34,9 +34,7 @@ body{
 }
 
 #root{
-    /* background-color:var(--grayisch);
-    border: 5px solid;
-    border-radius: 5px; */
+
     grid-area: root;
     display: grid;
     grid-template-columns: repeat(5, 20%);
@@ -46,11 +44,6 @@ body{
 } 
 
 #textLabel{ 
-    /* border: 3px black solid;
-    color: var(--blackisch);
-    border-radius: 5px;
-    background-color: var(--grayisch);
-    margin: var(--general-marg); */
     text-align: center;
 
 }
@@ -63,7 +56,6 @@ body{
 }
 
 .diceBox{
-    /* background-color:var(--orangeisch); */
     border: 4px solid;
     border-radius: 20px;
     text-align: center;
@@ -73,29 +65,15 @@ body{
 h1{
     font-size: 50px;
     text-decoration: underline;
-    /* color: var(--pinkisch); */
-    -webkit-text-stroke: 2px black; /* width and color */
+    -webkit-text-stroke: 2px black; 
 }
 
 input{
-    /* text-align: center;
-    border: 2px solid;
-    border-radius: 5px;
-    font-size: 15px;
-    background-color: var(--whitisch);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    width: 75%; */
-}
+    text-align: center;
+
 
 button{
-    /* border: 2px var(--blackisch) solid;
-    border-radius: 5px;
-    background-color: var(--grayisch);
-    font-size: larger;
-    font-weight: 400;
-    margin: var(--general-marg);
-    color: var(--blackisch); */
+
 }
 
 #input{

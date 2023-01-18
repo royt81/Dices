@@ -56,7 +56,7 @@ function formDice(){
     inputBtn.addEventListener("click", ()=>{
         let input= sidesInput.value;
         
-        if(isNan(input)){
+        if(isNaN(input)){
             diceDisplay.innerText = "Only numbers please!";
         }
         else{

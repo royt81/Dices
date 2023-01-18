@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../Desktop/pics/internet-pics"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Dices"
+	}
+}

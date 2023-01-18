@@ -55,9 +55,15 @@ function formDice(){
     
     inputBtn.addEventListener("click", ()=>{
         let input= sidesInput.value;
-        let result = Math.floor(Math.random() * input) + 1;
-        diceDisplay.innerText = result;
-        inputBtn.innerText = "ROLL"
+        
+        if(isNan(input)){
+            diceDisplay.innerText = "Only numbers please!";
+        }
+        else{
+            let result = Math.floor(Math.random() * input) + 1;
+            diceDisplay.innerText = result;
+            inputBtn.innerText = "ROLL"
+        }
         }
     )
 }

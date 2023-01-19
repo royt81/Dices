@@ -15,16 +15,16 @@ submitBtn.addEventListener("click", ()=>{
 
     if(isNaN(number)){
         textLabel.innerText = "You must enter a number!";
-        textLabel.style.backgroundColor = "red";
+    //    textLabel.style.backgroundColor = "red";
     }
     if(number>20){
         textLabel.innerText = "let's keep it to no more then 20, ok?"
-        textLabel.style.backgroundColor = "yellow"
+    //    textLabel.style.backgroundColor = "yellow"
     }
     if(number<=20 && !isNaN(number)){
         creatDice(number)
         textLabel.innerText = `making ${number} dices for you!`;
-        textLabel.style.backgroundColor = "green";
+    //    textLabel.style.backgroundColor = "green";
     }
 })
 
@@ -42,8 +42,8 @@ function formDice(){
     let diceDisplay = document.createElement("h3");
 
     diceBox.className = "diceBox"
-    diceBox.style.width = 
-
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    diceBox.style.backgroundColor = "#" + randomColor;
     sidesInput.placeholder = "how many sides?";
     inputBtn.innerText = "SUBMIT";
     diceDisplay.innerText = 0;
@@ -55,7 +55,6 @@ function formDice(){
     
     inputBtn.addEventListener("click", ()=>{
         let input= sidesInput.value;
-        
         if(isNaN(input)){
             diceDisplay.innerText = "Only numbers please!";
         }
@@ -64,9 +63,23 @@ function formDice(){
             diceDisplay.innerText = result;
             inputBtn.innerText = "ROLL"
         }
-        }
-    )
+    })
 }
+
+// function checkInput(){
+//     let input= sidesInput.value;
+        
+//     if(isNaN(input)){
+//         diceDisplay.innerText = "Only numbers please!";
+//     }
+//     else{
+//         let result = Math.floor(Math.random() * input) + 1;
+//         diceDisplay.innerText = result;
+//         inputBtn.innerText = "ROLL"
+//     }
+// }
+
+
 
 resetBtn.addEventListener("click", ()=>{
     root.innerHTML = ""

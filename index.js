@@ -14,8 +14,8 @@ submitBtn.addEventListener("click", ()=>{
     if(isNaN(number)){
         textLabel.innerText = "You must enter a number!";
     }
-    else if(number>25){
-        textLabel.innerText = "let's keep it to no more then 25, ok?"
+    else if(number>200){
+        textLabel.innerText = "let's keep it to no more then 200, ok?"
     }
     else if(number == 0){
         textLabel.innerText = "you can do better"
